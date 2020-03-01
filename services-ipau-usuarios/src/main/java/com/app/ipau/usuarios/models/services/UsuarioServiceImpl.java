@@ -33,4 +33,9 @@ public class UsuarioServiceImpl implements IUsuario {
 		return usuarioDao.save(usuario);
 	}
 
+	@Override
+	public Usuario findByUsername(String username) {
+		return usuarioDao.findByUsername(username);
+	}
+
 }

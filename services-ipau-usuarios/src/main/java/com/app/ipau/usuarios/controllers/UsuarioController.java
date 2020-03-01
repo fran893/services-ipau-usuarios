@@ -30,10 +30,17 @@ public class UsuarioController {
 		return usuarioService.findById(id);
 	}
 	
+	@GetMapping("/getUsername/{username}")
+	public Usuario getUsername(@PathVariable String username) {
+		return usuarioService.findByUsername(username);
+	}
+	
 	@PostMapping("/crear")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Usuario crear(@RequestBody Usuario usuario) {
 		return usuarioService.save(usuario);
 	}
+	
+	
 	
 }

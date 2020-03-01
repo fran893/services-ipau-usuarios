@@ -11,5 +11,7 @@ public interface IUsuario {
 	public Usuario findById(Long id);
 	
 	public Usuario save(Usuario usuario);
+	
+	public Usuario findByUsername(String username);
 
 }
